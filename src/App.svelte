@@ -5,7 +5,6 @@
   $: wordCount = wordsCount(inputValue);
 
   function resize(e) {
-    console.log(e);
     e.target.style.height = "";
     e.target.style.height = Math.max(e.target.scrollHeight, 600) + "px";
   }
