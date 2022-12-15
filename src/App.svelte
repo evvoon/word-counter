@@ -1,24 +1,20 @@
 <script>
-  import { onMount } from "svelte";
+  import { wordsCount } from "words-count";
 
-  let textInput = null;
-  let wordCount = 0;
-
-  onMount(() => {
-    textInput = document.querySelector(".text-input");
-
-    textInput.addEventListener("input", () => {
-      const splitted = textInput.value.trim().split(/[\s-]/);
-      wordCount = splitted.length;
-    });
-  });
+  let inputValue = "";
+  $: wordCount = wordsCount(inputValue);
 </script>
 
 <h1>WORD COUNTER</h1>
 
 <div>{wordCount}</div>
 
-<textarea class="text-input" cols="30" rows="10" placeholder="Start typing" />
+<textarea
+  cols="30"
+  rows="10"
+  placeholder="Start typing"
+  bind:value={inputValue}
+/>
 
 <style>
   textarea {
