@@ -1,1 +1,2 @@
-word counter - counts the words for you :)
+word counter
+-> counts the words for you :)
