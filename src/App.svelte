@@ -3,13 +3,19 @@
 
   let inputValue = "";
   $: wordCount = wordsCount(inputValue);
+
+  function resize(e) {
+    console.log(e);
+    e.target.style.height = "";
+    e.target.style.height = Math.max(e.target.scrollHeight, 600) + "px";
+  }
 </script>
 
-<h1>WORD COUNTER</h1>
-
+<h1>word counter</h1>
 <div>{wordCount}</div>
 
 <textarea
+  on:input={resize}
   cols="30"
   rows="10"
   placeholder="Start typing"
@@ -26,7 +32,7 @@
     padding: 20px; /* space on the inside */
     margin: 1rem; /* space on the outside */
 
-    width: 1100px;
+    width: 95vw;
     height: 500px;
 
     border: none;
@@ -36,14 +42,13 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-
-    /* border: 1px 10; */
-    /* border-radius: 4px; */
   }
 
   div {
-    font-family: monospace;
-    font-size: 40px;
+    font-size: 2rem;
     color: rgb(191 60 136);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
   }
 </style>
