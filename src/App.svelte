@@ -49,5 +49,8 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+    padding: 25px;
+    backdrop-filter: blur(30px);
+    border-radius: 24px;
   }
 </style>
