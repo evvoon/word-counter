@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  display: flex;
+  display: grid;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -31,7 +31,9 @@ h1 {
 }
 
 #app {
-  padding: 1rem;
+  width: 95vw;
+  display: grid;
+  place-items: center;
 }
 
 @media (prefers-color-scheme: light) {
