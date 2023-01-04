@@ -31,7 +31,7 @@
     padding: 20px; /* space on the inside */
     margin: 1rem; /* space on the outside */
 
-    width: 95vw;
+    width: 95%;
     height: 500px;
 
     border: none;
